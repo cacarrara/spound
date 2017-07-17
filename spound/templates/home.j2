@@ -1,0 +1,46 @@
+{% extends "layout.j2" %}
+
+{% block content %}
+  <div class="col-md-3">
+    <img src="{{ user.images[0].url }}" alt="">
+    <dl>
+      <dt>Name:</dt>
+      <dd>{{ user.display_name }}</dd>
+      <dt>Id:</dt>
+      <dd><a href="{{ user.external_urls.spotify }}">{{ user.id }}</a></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-9">
+    <form class="form-inline" action="{{ request.route_url('search') }}">
+      <div class="form-group">
+        <input class="form-control" type="text" name="q" placeholder="track name">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <h3>Playlists</h3>
+    <table class="table table-hover">
+      {% for playlist in playlists %}
+      <tr>
+        {% if request.session.current_playlist_id == playlist.id %}
+          <td style="width: 90%">
+            <a href="{{ playlist.external_urls.spotify }}"><b>{{ playlist.name }}</b></a>
+          </td>
+          <td></td>
+        {% else %}
+          <td style="width: 90%">
+            <a href="{{ playlist.external_urls.spotify }}">{{ playlist.name }}</a>
+          </td>
+          <td>
+            <form action="{{ request.route_url('playlist.activate') }}" method="post">
+              <input type="hidden" name="playlist_id" value="{{ playlist.id }}">
+              <button type="submit" class="btn btn-default">Activate</button>
+            </form>
+          </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock content %}

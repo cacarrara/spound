@@ -10,25 +10,13 @@ secret
 - Clone the project.
 
     ```
-    git clone git@github.com:cacarrara/spound.git
+    git clone git@github.com:mochaoss/spound.git
     ```
 
 - Change directory into your newly cloned project.
 
     ```
     cd spound
-    ```
-
-- Upgrade packaging tools (create a virtualenv before).
-
-    ```
-    pip install --upgrade pip setuptools
-    ```
-
-- Install the project in editable mode with its testing requirements.
-
-    ```
-    pip install -e ".[testing]"
     ```
 
 - Create your config file and edit it properly.
@@ -40,7 +28,6 @@ secret
 - Run your project.
 
     ```
-    pserve development.ini --reload
     ```
 
 

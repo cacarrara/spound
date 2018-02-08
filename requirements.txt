@@ -1,7 +1,0 @@
-plaster_pastedeploy
-prettyconf
-pyramid
-pyramid_jinja2
-pyramid_debugtoolbar
-spotipy
-waitress

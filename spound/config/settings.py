@@ -43,7 +43,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(FRONTEND_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'debug': config('TEMPLATE_DEBUG', default=DEBUG, cast=config.boolean),
@@ -89,7 +91,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(FRONTEND_DIR, 'static_deploy')
 STATIC_DIR = os.path.join(FRONTEND_DIR, 'static')
 STATICFILES_DIRS = (

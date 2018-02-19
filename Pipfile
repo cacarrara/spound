@@ -10,7 +10,11 @@ name = "pypi"
 django = "*"
 prettyconf = "*"
 dj-database-url = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 
 [dev-packages]
 
+[requires]
+python_full_version = "3.6.4"

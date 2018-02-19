@@ -96,6 +96,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(FRONTEND_DIR, 'static_deploy')
 STATIC_DIR = os.path.join(FRONTEND_DIR, 'static')
 STATICFILES_DIRS = (
-    ('styles', '%s/styles' % STATIC_DIR),
+    ('css', '%s/css' % STATIC_DIR),
+    ('fonts', '%s/fonts' % STATIC_DIR),
+    ('images', '%s/images' % STATIC_DIR),
     ('js', '%s/js' % STATIC_DIR),
 )

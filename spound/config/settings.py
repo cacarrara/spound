@@ -92,7 +92,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(FRONTEND_DIR, 'static_deploy')
 STATIC_DIR = os.path.join(FRONTEND_DIR, 'static')
 STATICFILES_DIRS = (

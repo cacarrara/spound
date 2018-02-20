@@ -12,9 +12,15 @@ prettyconf = "*"
 dj-database-url = "*"
 whitenoise = "*"
 gunicorn = "*"
+spotipy = "*"
 
 
 [dev-packages]
 
+ipython = "*"
+ipdb = "*"
+
+
 [requires]
+
 python_full_version = "3.6.4"

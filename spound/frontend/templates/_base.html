@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+  
+  <!-- Loading third party fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" type="text/css">
+  <link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+  <!-- Loading main css file -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  <!--[if lt IE 9]>
+  <script src="js/ie-support/html5.js"></script>
+  <script src="js/ie-support/respond.js"></script>
+  <![endif]-->
+  <title>Spound - Your jukebox online!</title>
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+  
+  <div id="site-content">
+    {% include '_navbar.html' %}
+    {% block content %}{% endblock %}
+    {% include '_footer.html' %}
+  </div> <!-- #site-content -->
+
+  <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>		
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
